@@ -3,13 +3,15 @@ import { useState } from "react";
 import { DatePicker } from "@mui/x-date-pickers";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { TextField } from "@mui/material";
-import dayjs, { Dayjs } from "dayjs";
+import { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 
 export default function DateReserve({
   onDateChange,
+  role,
 }: {
   onDateChange: (dates: [Date | null, Date | null]) => void;
+  role: string;
 }) {
   const [checkInDate, setCheckInDate] = useState<Dayjs | null>(null);
   const [checkOutDate, setCheckOutDate] = useState<Dayjs | null>(null);
@@ -83,6 +85,7 @@ export default function DateReserve({
                 },
               },
             }}
+
           />
         </LocalizationProvider>
       </div>

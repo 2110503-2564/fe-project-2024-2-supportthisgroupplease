@@ -38,6 +38,7 @@ export default function MyBooking() {
                 <h1 className="text-3xl font-outfit font-semibold text-left text-white mb-6">Bookings</h1>
                 : <h1 className="text-3xl font-outfit font-semibold text-left text-white mb-6">My Bookings</h1> }
 
+
                 {bookings.length > 0 ? (
                     <div className="w-full space-y-4">
                         {bookings.map((bookingItem) => (
@@ -45,6 +46,7 @@ export default function MyBooking() {
                                 key={bookingItem._id} 
                                 bookingData={bookingItem} 
                                 setBookings={setBookings} // Pass the setter function
+                                profile={userProfile || undefined}
                             />
                         ))}
                     </div>

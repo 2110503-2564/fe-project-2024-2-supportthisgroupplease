@@ -2,7 +2,7 @@ import RoomCatalog from "@/components/RoomCatalog";
 import { Suspense } from "react";
 import { LinearProgress } from "@mui/material";
 
-export default function room( {rooms}: {rooms:RoomItem[]} ) {
+function Room( {rooms}: {rooms:RoomItem[]} ) {
 
     return (
         <div>
@@ -16,3 +16,5 @@ export default function room( {rooms}: {rooms:RoomItem[]} ) {
         </div>
     );
 }
+
+export default Room;

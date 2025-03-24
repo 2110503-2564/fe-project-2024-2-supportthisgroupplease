@@ -9,7 +9,7 @@ import { Alert, Button } from "@mui/material"
 import { Dayjs } from "dayjs";
 import { useSession } from "next-auth/react";
 
-export default function HotelBooking({ hotels }: { hotels: HotelItem[] }) {
+export default function HotelBooking({ hotels, role }: { hotels: HotelItem[], role: string }) {
     const [selectedHotel, setSelectedHotel] = useState<string>("");
     const [rooms, setRooms] = useState<RoomItem[]>([]);
     const [selectedRoom, setSelectedRoom] = useState<RoomItem | null>(null);
@@ -101,7 +101,7 @@ export default function HotelBooking({ hotels }: { hotels: HotelItem[] }) {
             <Autocomplete
                     disablePortal
                     options={rooms}
-                    getOptionLabel={(option) => `Room ${option.number} - ${option.type} - $${option.price}`}
+                    getOptionLabel={(option) => `Room ${option.number} - ${option.type} - ${option.price} baht`}
                     sx={{ width: 300 }}
                     value={selectedRoom}
                     onChange={(event, newValue) => setSelectedRoom(newValue)}
@@ -117,7 +117,8 @@ export default function HotelBooking({ hotels }: { hotels: HotelItem[] }) {
             <DateReserve onDateChange={(dates) => {
                 setCheckInDate(dates[0]);
                 setCheckOutDate(dates[1]);
-            }} />
+                }} 
+                role={role}/>
             </div>
 
 

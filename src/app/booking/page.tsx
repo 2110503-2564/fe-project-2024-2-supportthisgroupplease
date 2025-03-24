@@ -16,13 +16,13 @@ export default async function Booking() {
     <main className="bg-[#000235] h-[1200px] text-white min-h-screen">
       {/* Hero Section */}
       <BookingHero />
-
       {/* Booking Form in its own centered grid */}
       {/* <section className="w-[1065px] mx-auto grid grid-cols-12 gap-[15px] pt-10 pb-36">
         <div className="col-span-12 md:col-span-12 md:col-start-1"> */}
           <BookingForm hotels={hotelJson.data} />
         {/* </div>
       </section> */}
+
     </main>
   );
 }

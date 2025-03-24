@@ -2,7 +2,7 @@ interface BookingItem {
   _id: string,
   checkInDate: string,
   checkOutDate: string,
-  room: string,
+  room: RoomItem,
   hotel: HotelItem
 }
   
@@ -64,4 +64,23 @@ interface UserItem {
   tel: string
   email: string
   role: string
+}
+
+interface PaymentItem {
+  _id: string;
+  booking: string; 
+  user: string; 
+  // @ts-ignore
+  amount: number;
+  status: string;
+  method: string;
+  paymentDate?: Date;
+  canceledAt?: Date | null;
+}
+
+interface PaymentJson {
+  success: boolean,
+  count: number,
+  pagination: Object,
+  data: PaymentItem[]
 }

@@ -1,6 +1,6 @@
 export default async function createRoom(roomData: object) {
     
-    const response = await fetch(`https://hotel-back-end.vercel.app/api/v1/hotels`, {
+    const response = await fetch(`https://hotel-booking-backend-ten.vercel.app/api/v1/hotels`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

@@ -31,6 +31,10 @@ export const authOptions:AuthOptions = {
         })
     ],
     session: { strategy: "jwt" },
+    pages: {
+        signIn: "/signin", // Custom login page
+        error: "/signin?error=true", // Redirect on error
+    },
     callbacks: {
         async jwt({token, user}) {
             return {...token, ...user}

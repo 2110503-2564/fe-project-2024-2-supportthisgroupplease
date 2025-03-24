@@ -53,6 +53,7 @@ export default function Card({
           ) : (
             <div className="absolute inset-0 flex items-center justify-center text-gray-500">
               Failed to load image
+
             </div>
           )}
         </div>

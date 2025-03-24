@@ -6,6 +6,7 @@ import updateBooking from "@/libs/Booking/updateBooking";
 import DateReserve from "./DateReserve";
 import deleteBooking from "@/libs/Booking/deleteBooking";
 import { useSession } from "next-auth/react";
+
 import {
   Button,
   Dialog,
@@ -56,7 +57,6 @@ export default function BookingCard({
         },
         session?.user.token
       );
-
       setCheckIn(tempCheckIn);
       setCheckOut(tempCheckOut);
       setIsEdit(false);
@@ -69,6 +69,7 @@ export default function BookingCard({
       setSnackbarOpen(true);
     }
   };
+
 
   const handleDeleteConfirm = async () => {
     try {
@@ -117,6 +118,7 @@ export default function BookingCard({
           </Button>
         </div>
       </div>
+
 
       {/* Delete Confirmation Dialog */}
       <Dialog open={open} onClose={() => setOpen(false)}>

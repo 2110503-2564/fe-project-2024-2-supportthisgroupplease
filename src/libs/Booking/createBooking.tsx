@@ -1,5 +1,5 @@
 export default async function createBooking(roomId: string, bookingData: object, token: string) {
-    const response = await fetch(`http://localhost:5000/api/v1/rooms/${roomId}/bookings`, {
+    const response = await fetch(`https://hotel-booking-backend-ten.vercel.app/api/v1/rooms/${roomId}/bookings`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

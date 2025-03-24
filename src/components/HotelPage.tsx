@@ -7,7 +7,7 @@ export default async function HotelPage({ hotelDetail }: { hotelDetail: Promise<
 
     return (
         <div className="container mx-auto p-6">
-            <h1 className="text-2xl font-semibold text-center mb-6">{hotel.name}</h1>
+            <h1 className="text-2xl font-semibold text-center text-white mb-6">{hotel.name}</h1>
 
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 {hotel.picture && (

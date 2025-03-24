@@ -1,6 +1,6 @@
 export default async function deleteRoom(id: string) {
     
-    const response = await fetch(`https://hotel-back-end.vercel.app/api/v1/rooms/${id}`, {
+    const response = await fetch(`https://hotel-booking-backend-ten.vercel.app/api/v1/rooms/${id}`, {
         method: "DELETE",
     });
 

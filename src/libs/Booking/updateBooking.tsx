@@ -1,5 +1,5 @@
 export default async function updateBooking(id: string, bookingData: object, token: string | undefined) {
-    const response = await fetch(`http://localhost:5000/api/v1/bookings/${id}`, {
+    const response = await fetch(`https://hotel-booking-backend-ten.vercel.app/api/v1/bookings/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
