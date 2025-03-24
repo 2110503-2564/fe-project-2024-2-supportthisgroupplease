@@ -9,7 +9,7 @@ interface CardProps {
   hotelName: string;
   address: string;
   imgSrc: string;
-  rating: number; // ⭐ New prop
+  rating?: number; // ⭐ New prop
 }
 
 export default function Card({
